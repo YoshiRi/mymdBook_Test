@@ -1,4 +1,4 @@
-# Test
+# Summary
 
-- [Introduction](.chapters/introduction.md)
-  - [equations](.equation_test.md)
+- [Introduction](chapters/introduction.md)
+  - [equations](equation_test.md)

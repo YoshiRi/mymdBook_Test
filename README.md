@@ -10,6 +10,8 @@ mymdBook_Test
 ├── .github
 │  └── workflow
 │     └── mdBook.yml
+│
+├── book.toml
 └── src
    ├── chapters
    │  ├── introduction.md
@@ -19,7 +21,15 @@ mymdBook_Test
 
 ### mdBooks workflow
 
-Sample yml file is [here](https://github.com/peaceiris/actions-mdbook).
+
+[.github/workflow/mdBook.yml](.github/workflow/mdBook.yml) configures CI build settings copied from [here](https://github.com/peaceiris/actions-mdbook).
+
+Roughly speaking, it does something like:
+
+1. Upload files to CI
+2. Build mdbook
+3. Push to gh-pages branch
+
 
 ```yml
 name: github pages
@@ -50,9 +60,23 @@ jobs:
           publish_dir: ./book
 ```
 
+### book.toml
 
+[book.toml](book.toml) is a configuration file.
 
-## How to
+### For further writings
+
+See [official documentation](https://budziq.github.io/mdBook/cli/init.html).
+
+## Compile and see locally
+
+If you use docker in WSL(or Linux), just try following command.
+
+```
+wsl docker run --rm -v $(pwd):/book/ peaceiris/mdbook build
+```
+
+## Output
 
 Finally you can see output page in [here](https://yoshiri.github.io/mymdBook_Test/).
 
