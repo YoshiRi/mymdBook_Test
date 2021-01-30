@@ -1,0 +1,4 @@
+# ignore book
+book/*
+
+# wsl docker run --rm -v $(pwd):/book/ peaceiris/mdbook build
