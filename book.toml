@@ -1,0 +1,7 @@
+[book]
+authors = ["Your Name"]
+src = "src"
+title = "mdBook_Test"
+
+[output.html]
+mathjax-support = true
